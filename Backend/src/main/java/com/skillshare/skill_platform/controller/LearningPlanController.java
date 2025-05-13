@@ -4,7 +4,8 @@ import com.skillshare.skill_platform.dto.LearningPlanRQ;
 import com.skillshare.skill_platform.dto.LearningPlanResponse;
 import com.skillshare.skill_platform.entity.LearningPlan;
 import com.skillshare.skill_platform.exception.ResourceNotFoundException;
-import com.skillshare.skill_platform.service.LearningPlanService;
+import com.skillshare.skill_platform.features.learningplane.service.LearningPlanService;
+
 import java.util.List;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;

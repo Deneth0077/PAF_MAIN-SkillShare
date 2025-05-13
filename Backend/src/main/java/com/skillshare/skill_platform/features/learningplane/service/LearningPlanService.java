@@ -1,4 +1,4 @@
-package com.skillshare.skill_platform.service;
+package com.skillshare.skill_platform.features.learningplane.service;
 
 import com.skillshare.skill_platform.dto.LearningPlanRQ;
 import com.skillshare.skill_platform.dto.LearningPlanResponse;
