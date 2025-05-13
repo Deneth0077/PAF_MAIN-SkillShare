@@ -11,7 +11,7 @@ import {
   Edit, 
   Trash 
 } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../../../contexts/ThemeContext';
 import { 
   LearningPlan, 
   getLearningPlanById,
@@ -19,8 +19,8 @@ import {
   unfollowLearningPlan,
   markTopicAsCompleted,
   deleteLearningPlan
-} from '../services/api/learningPlans';
-import { useAuth } from '../contexts/AuthContext';
+} from '../../../services/api/learningPlans';
+import { useAuth } from '../../../contexts/AuthContext';
 
 const LearningPlanPage = () => {
   const { id } = useParams<{ id: string }>();

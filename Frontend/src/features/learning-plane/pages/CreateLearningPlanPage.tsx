@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Plus, Trash2 } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
-import { useAuth } from '../contexts/AuthContext';
+import { useTheme } from '../../../contexts/ThemeContext';
+import { useAuth } from '../../../contexts/AuthContext';
 import { 
   createLearningPlan, 
   CreateLearningPlanRequest, 
   Resource, 
   Topic 
-} from '../services/api/learningPlans';
+} from '../../../services/api/learningPlans';
 
 // Subject options
 const SUBJECTS = ['Maths', 'Science', 'English', 'History', 'Technology', 'Arts', 'Other'];

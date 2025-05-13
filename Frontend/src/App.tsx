@@ -3,17 +3,17 @@ import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './components/layout/Layout';
-import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
-import LoginPage from './pages/LoginPage';
-import SearchPage from './pages/SearchPage';
-import NotificationsPage from './pages/NotificationsPage';
-import LearningPlanPage from './pages/LearningPlanPage';
-import LearningPlanListPage from './pages/LearningPlanListPage';
-import TestLearningPlanPage from './pages/TestLearningPlanPage';
-import CreateLearningPlanPage from './pages/CreateLearningPlanPage';
-import EditLearningPlanPage from './pages/EditLearningPlanPage';
-import OAuthCallbackPage from './pages/OAuthCallbackPage';
+import HomePage from './features/learning-plane/pages/HomePage';
+import ProfilePage from './features/learning-plane/pages/ProfilePage';
+import LoginPage from './features/learning-plane/pages/LoginPage';
+import SearchPage from './features/learning-plane/pages/SearchPage';
+import NotificationsPage from './features/learning-plane/pages/NotificationsPage';
+import LearningPlanPage from './features/learning-plane/pages/LearningPlanPage';
+import LearningPlanListPage from './features/learning-plane/pages/LearningPlanListPage';
+import TestLearningPlanPage from './features/learning-plane/pages/TestLearningPlanPage';
+import CreateLearningPlanPage from './features/learning-plane/pages/CreateLearningPlanPage';
+import EditLearningPlanPage from './features/learning-plane/pages/EditLearningPlanPage';
+import OAuthCallbackPage from './features/learning-plane/pages/OAuthCallbackPage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 // import './App.css'; // Import your CSS file here
 import './styles/global.css'; // Import your global CSS file here

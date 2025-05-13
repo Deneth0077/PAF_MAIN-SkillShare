@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Clock, Users, Plus, Edit, Star } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
-import { useAuth } from '../contexts/AuthContext';
-import { getAllLearningPlans, getUserLearningPlans, LearningPlan } from '../services/api/learningPlans';
+import { useTheme } from '../../../contexts/ThemeContext';
+import { useAuth } from '../../../contexts/AuthContext';
+import { getAllLearningPlans, getUserLearningPlans, LearningPlan } from '../../../services/api/learningPlans';
 
 const LearningPlanListPage = () => {
   const { theme } = useTheme();

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getAllLearningPlans, LearningPlan } from '../services/api/learningPlans';
+import { getAllLearningPlans, LearningPlan } from '../../../services/api/learningPlans';
 
 const TestLearningPlanPage = () => {
   const [plans, setPlans] = useState<LearningPlan[]>([]);
