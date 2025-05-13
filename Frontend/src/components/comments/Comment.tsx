@@ -143,7 +143,7 @@ const CommentSection = ({ postId, onCommentCountChange }: CommentSectionProps) =
           
           <input
             type="text"
-            placeholder="Add a comment..."
+            placeholder="Add a 1  comment..."
             className={`flex-1 rounded-full py-2 px-4 ${
               theme === 'dark' 
                 ? 'bg-slate-700 text-white border-slate-600' 
@@ -179,7 +179,7 @@ const CommentSection = ({ postId, onCommentCountChange }: CommentSectionProps) =
         </div>
       )}
       
-      {/* Comments list */}
+      {/* Comments list  */}
       {loading ? (
         <div className="flex justify-center py-4">
           <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-indigo-600"></div>
