@@ -13,7 +13,7 @@ import classes from "./Notifications.module.scss";
 
 enum NotificationType {
   LIKE = "LIKE",
-  COMMENT = "COMMENT",
+  COMMENT = "COMMENT 1",
 }
 export interface INotification {
   id: number;
