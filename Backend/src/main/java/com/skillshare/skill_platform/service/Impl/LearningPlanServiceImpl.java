@@ -8,7 +8,7 @@ import com.skillshare.skill_platform.entity.Topic;
 import com.skillshare.skill_platform.entity.User;
 import com.skillshare.skill_platform.entity.UserProfile;
 import com.skillshare.skill_platform.exception.ResourceNotFoundException;
-import com.skillshare.skill_platform.repository.LearningPlanRepository;
+import com.skillshare.skill_platform.features.learningplane.repository.LearningPlanRepository;
 import com.skillshare.skill_platform.repository.UserRepository;
 import com.skillshare.skill_platform.service.LearningPlanService;
 import java.time.LocalDateTime;

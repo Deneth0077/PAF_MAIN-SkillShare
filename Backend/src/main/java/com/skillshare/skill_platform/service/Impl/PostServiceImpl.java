@@ -2,8 +2,8 @@ package com.skillshare.skill_platform.service.Impl;
 
 import com.skillshare.skill_platform.dto.PostRequest;
 import com.skillshare.skill_platform.entity.Post;
+import com.skillshare.skill_platform.features.learningplane.repository.ResourceRepository;
 import com.skillshare.skill_platform.entity.Like;
-import com.skillshare.skill_platform.repository.PostRepository;
 import com.skillshare.skill_platform.service.CloudinaryService;
 import com.skillshare.skill_platform.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class PostServiceImpl implements PostService {
     private CloudinaryService cloudinaryService;
 
     @Autowired
-    private PostRepository postRepository;
+    private ResourceRepository postRepository;
 
     @Override
     public ResponseEntity<Map> createPost(PostRequest postRequest) {
