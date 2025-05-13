@@ -4,7 +4,7 @@ import { Heart, MessageCircle, MoreHorizontal, Bookmark, Share2, Trash2, Edit2 }
 import { Link } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { useAuth } from '../../contexts/AuthContext';
-import CommentSection from '../comments/CommentSection';
+import CommentSection from '../comments/Comment';
 import postsApi, { Post } from '../../services/api/posts';
 
 type Media = {
