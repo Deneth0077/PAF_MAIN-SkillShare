@@ -15,7 +15,8 @@ import CreateLearningPlanPage from './pages/CreateLearningPlanPage';
 import EditLearningPlanPage from './pages/EditLearningPlanPage';
 import OAuthCallbackPage from './pages/OAuthCallbackPage';
 import ProtectedRoute from './components/auth/ProtectedRoute';
-
+// import './App.css'; // Import your CSS file here
+import './styles/global.css'; // Import your global CSS file here
 function App() {
   return (
     <Router>
