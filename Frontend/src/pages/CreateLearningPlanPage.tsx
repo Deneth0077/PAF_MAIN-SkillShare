@@ -39,7 +39,7 @@ const CreateLearningPlanPage = () => {
   };
 
   const handleRemoveTopic = (index: number) => {
-    setTopics(topics.filter((_, i) => i !== index));
+    setTopics(topics.filter((_: any, i: number) => i !== index));
   };
 
   const handleTopicChange = (index: number, value: string) => {
@@ -53,7 +53,7 @@ const CreateLearningPlanPage = () => {
   };
 
   const handleRemoveResource = (index: number) => {
-    setResources(resources.filter((_, i) => i !== index));
+    setResources(resources.filter((_: any, i: number) => i !== index));
   };
 
   const handleResourceChange = (index: number, field: keyof Omit<Resource, 'id'>, value: string) => {
@@ -81,12 +81,12 @@ const CreateLearningPlanPage = () => {
       return;
     }
 
-    if (topics.some(topic => !topic.title.trim())) {
+    if (topics.some((topic: { title: string; }) => !topic.title.trim())) {
       setError('All topics must have a title');
       return;
     }
 
-    if (resources.some(resource => !resource.title.trim() || !resource.url.trim())) {
+    if (resources.some((resource: { title: string; url: string; }) => !resource.title.trim() || !resource.url.trim())) {
       setError('All resources must have a title and URL');
       return;
     }
@@ -97,12 +97,12 @@ const CreateLearningPlanPage = () => {
       setSubmitSuccess(false);
 
       // Add IDs to topics and resources
-      const topicsWithIds: Topic[] = topics.map((topic, index) => ({
+      const topicsWithIds: Topic[] = topics.map((topic: any, index: any) => ({
         ...topic,
         id: `topic-${Date.now()}-${index}`
       }));
 
-      const resourcesWithIds: Resource[] = resources.map((resource, index) => ({
+      const resourcesWithIds: Resource[] = resources.map((resource: any, index: any) => ({
         ...resource,
         id: `resource-${Date.now()}-${index}`
       }));
@@ -172,7 +172,7 @@ const CreateLearningPlanPage = () => {
                 id="title"
                 type="text"
                 value={title}
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={(e: { target: { value: any; }; }) => setTitle(e.target.value)}
                 className={`w-full px-3 py-2 rounded-lg border ${
                   theme === 'dark' 
                     ? 'bg-slate-700 border-slate-600 text-white' 
@@ -189,7 +189,7 @@ const CreateLearningPlanPage = () => {
               <textarea
                 id="description"
                 value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                onChange={(e: { target: { value: any; }; }) => setDescription(e.target.value)}
                 rows={4}
                 className={`w-full px-3 py-2 rounded-lg border ${
                   theme === 'dark' 
@@ -208,7 +208,7 @@ const CreateLearningPlanPage = () => {
                 <select
                   id="subject"
                   value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
+                  onChange={(e: { target: { value: any; }; }) => setSubject(e.target.value)}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     theme === 'dark' 
                       ? 'bg-slate-700 border-slate-600 text-white' 
@@ -233,7 +233,7 @@ const CreateLearningPlanPage = () => {
                   min="1"
                   max="365"
                   value={estimatedDays}
-                  onChange={(e) => setEstimatedDays(parseInt(e.target.value))}
+                  onChange={(e: { target: { value: string; }; }) => setEstimatedDays(parseInt(e.target.value))}
                   className={`w-full px-3 py-2 rounded-lg border ${
                     theme === 'dark' 
                       ? 'bg-slate-700 border-slate-600 text-white' 
@@ -259,12 +259,12 @@ const CreateLearningPlanPage = () => {
           </div>
 
           <div className="space-y-3">
-            {topics.map((topic, index) => (
+            {topics.map((topic: { title: any; }, index: number) => (
               <div key={index} className="flex items-center gap-2">
                 <input
                   type="text"
                   value={topic.title}
-                  onChange={(e) => handleTopicChange(index, e.target.value)}
+                  onChange={(e: { target: { value: string; }; }) => handleTopicChange(index, e.target.value)}
                   placeholder={`Topic ${index + 1}`}
                   className={`flex-1 px-3 py-2 rounded-lg border ${
                     theme === 'dark' 
@@ -300,12 +300,12 @@ const CreateLearningPlanPage = () => {
           </div>
 
           <div className="space-y-4">
-            {resources.map((resource, index) => (
+            {resources.map((resource: { title: any; url: any; type: any; }, index: number) => (
               <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <input
                   type="text"
                   value={resource.title}
-                  onChange={(e) => handleResourceChange(index, 'title', e.target.value)}
+                  onChange={(e: { target: { value: string; }; }) => handleResourceChange(index, 'title', e.target.value)}
                   placeholder="Resource title"
                   className={`md:col-span-1 px-3 py-2 rounded-lg border ${
                     theme === 'dark' 
@@ -316,7 +316,7 @@ const CreateLearningPlanPage = () => {
                 <input
                   type="text"
                   value={resource.url}
-                  onChange={(e) => handleResourceChange(index, 'url', e.target.value)}
+                  onChange={(e: { target: { value: string; }; }) => handleResourceChange(index, 'url', e.target.value)}
                   placeholder="URL (https://...)"
                   className={`md:col-span-1 px-3 py-2 rounded-lg border ${
                     theme === 'dark' 
@@ -327,7 +327,7 @@ const CreateLearningPlanPage = () => {
                 <div className="flex items-center gap-2">
                   <select
                     value={resource.type}
-                    onChange={(e) => handleResourceChange(index, 'type', e.target.value as any)}
+                    onChange={(e: { target: { value: any; }; }) => handleResourceChange(index, 'type', e.target.value as any)}
                     className={`flex-1 px-3 py-2 rounded-lg border ${
                       theme === 'dark' 
                         ? 'bg-slate-700 border-slate-600 text-white' 
