@@ -143,7 +143,7 @@ const CommentSection = ({ postId, onCommentCountChange }: CommentSectionProps) =
           
           <input
             type="text"
-            placeholder="Add a comment..."
+            placeholder="Add a 1  comment..."
             className={`flex-1 rounded-full py-2 px-4 ${
               theme === 'dark' 
                 ? 'bg-slate-700 text-white border-slate-600' 
