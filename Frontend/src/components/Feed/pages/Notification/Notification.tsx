@@ -112,7 +112,7 @@ function Notification({
 
       <p
         style={{
-          marginRight: "auto",
+          marginRight: "a",
         }}
       >
         <strong>{notification.actor.firstName + " " + notification.actor.lastName}</strong>{" "}
