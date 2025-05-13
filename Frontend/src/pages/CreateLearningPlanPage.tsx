@@ -22,8 +22,8 @@ const CreateLearningPlanPage = () => {
   const [error, setError] = useState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  // Form state
-  const [title, setTitle] = useState('');
+
+  const [title, setTitle] = useState('#');
   const [description, setDescription] = useState('');
   const [subject, setSubject] = useState(SUBJECTS[0]);
   const [estimatedDays, setEstimatedDays] = useState(7);
