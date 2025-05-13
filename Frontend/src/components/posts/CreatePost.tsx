@@ -97,7 +97,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostCreated }) => {
       setIsLoading(false);
     }
   };
-
+//part
   return (
     <div className={`rounded-2xl ${theme === 'dark' ? 'bg-slate-800' : 'bg-white'} shadow-md p-4 mb-6`}>
       <h2 className="text-lg font-semibold mb-4 flex items-center"><Plus className="h-5 w-5 mr-2 text-indigo-600" />Create a Post</h2>
@@ -149,6 +149,7 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostCreated }) => {
           <div className="mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
             {error}
           </div>
+          
         )}
 
         <div className="flex items-center justify-between">
